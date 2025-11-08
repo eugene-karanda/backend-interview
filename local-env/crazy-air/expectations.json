@@ -1,0 +1,133 @@
+[
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/crazy-air/flights",
+      "body": {
+        "type": "JSON",
+        "json": {
+          "origin": "LHR",
+          "destination": "AMS",
+          "departureDate": "2025-11-20",
+          "returnDate": "2025-11-28",
+          "passengerCount": 2
+        },
+        "matchType": "STRICT"
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "Content-Type": [ "application/json" ]
+      },
+      "body": [
+        {
+          "airline": "Crazy Air Express",
+          "price": 123.45,
+          "cabinclass": "E",
+          "departureAirportCode": "LHR",
+          "destinationAirportCode": "AMS",
+          "departureDate": "2025-11-20T08:00:00",
+          "arrivalDate": "2025-11-20T10:10:00"
+        },
+        {
+          "airline": "Crazy Air Premium",
+          "price": 210.90,
+          "cabinclass": "B",
+          "departureAirportCode": "LHR",
+          "destinationAirportCode": "AMS",
+          "departureDate": "2025-11-20T09:00:00",
+          "arrivalDate": "2025-11-20T11:20:00"
+        }
+      ]
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/crazy-air/flights",
+      "body": {
+        "type": "JSON",
+        "json": {
+          "origin": "WAW",
+          "destination": "BCN",
+          "departureDate": "2025-12-05",
+          "returnDate": "2025-12-12",
+          "passengerCount": 1
+        },
+        "matchType": "STRICT"
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "Content-Type": [ "application/json" ]
+      },
+      "body": [
+        {
+          "airline": "Crazy Air Poland",
+          "price": 150.00,
+          "cabinclass": "E",
+          "departureAirportCode": "WAW",
+          "destinationAirportCode": "BCN",
+          "departureDate": "2025-12-05T06:30:00",
+          "arrivalDate": "2025-12-05T09:15:00"
+        }
+      ]
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/crazy-air/flights",
+      "body": {
+        "type": "JSON",
+        "json": {
+          "origin": "LHR",
+          "destination": "JFK",
+          "departureDate": "2025-12-10",
+          "returnDate": "2025-12-20",
+          "passengerCount": 3
+        },
+        "matchType": "STRICT"
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "Content-Type": [ "application/json" ]
+      },
+      "body": [
+        {
+          "airline": "Crazy Air Atlantic",
+          "price": 620.50,
+          "cabinclass": "E",
+          "departureAirportCode": "LHR",
+          "destinationAirportCode": "JFK",
+          "departureDate": "2025-12-10T11:00:00",
+          "arrivalDate": "2025-12-10T16:45:00"
+        },
+        {
+          "airline": "Crazy Air Atlantic",
+          "price": 950.99,
+          "cabinclass": "B",
+          "departureAirportCode": "LHR",
+          "destinationAirportCode": "JFK",
+          "departureDate": "2025-12-10T13:00:00",
+          "arrivalDate": "2025-12-10T18:55:00"
+        }
+      ]
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/crazy-air/flights"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": { "Content-Type": [ "application/json" ] },
+      "body": []
+    }
+  }
+]

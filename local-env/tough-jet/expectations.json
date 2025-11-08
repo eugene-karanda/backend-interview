@@ -1,0 +1,90 @@
+[
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/tough-jet/jets",
+      "body": {
+        "type": "JSON",
+        "json": {
+          "from": "LHR",
+          "to": "AMS",
+          "outboundDate": "2025-11-20",
+          "inboundDate": "2025-11-28",
+          "numberOfAdults": 2
+        },
+        "matchType": "STRICT"
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": { "Content-Type": [ "application/json" ] },
+      "body": [
+        {
+          "carrier": "ToughJet Airways",
+          "basePrice": 100.00,
+          "tax": 20.00,
+          "discount": 10.00,
+          "departureAirportName": "LHR",
+          "arrivalAirportName": "AMS",
+          "outboundDateTime": "2025-11-20T08:05:00",
+          "inboundDateTime": "2025-11-28T10:15:00"
+        },
+        {
+          "carrier": "ToughJet Plus",
+          "basePrice": 180.00,
+          "tax": 25.00,
+          "discount": 0.00,
+          "departureAirportName": "LHR",
+          "arrivalAirportName": "AMS",
+          "outboundDateTime": "2025-11-20T09:10:00",
+          "inboundDateTime": "2025-11-28T11:25:00"
+        }
+      ]
+    }
+  },
+
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/tough-jet/jets",
+      "body": {
+        "type": "JSON",
+        "json": {
+          "from": "WAW",
+          "to": "BCN",
+          "outboundDate": "2025-12-05",
+          "inboundDate": "2025-12-12",
+          "numberOfAdults": 1
+        },
+        "matchType": "STRICT"
+      }
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": { "Content-Type": [ "application/json" ] },
+      "body": [
+        {
+          "carrier": "ToughJet Polska",
+          "basePrice": 120.00,
+          "tax": 18.00,
+          "discount": 5.00,
+          "departureAirportName": "WAW",
+          "arrivalAirportName": "BCN",
+          "outboundDateTime": "2025-12-05T06:40:00",
+          "inboundDateTime": "2025-12-12T09:20:00"
+        }
+      ]
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/tough-jet/jets"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": { "Content-Type": [ "application/json" ] },
+      "body": []
+    }
+  }
+]

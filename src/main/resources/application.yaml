@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: deblock-flights
+
+logging.level:
+  org.deblock.exercise: DEBUG
+
+crazy-air:
+  base-url: ${CRAZY_AIR_BASE_URL:}
+
+tough-jet:
+  base-url: ${TOUGH_JET_BASE_URL:}

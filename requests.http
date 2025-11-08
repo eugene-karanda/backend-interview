@@ -1,0 +1,98 @@
+### 2x CrazyAir + 2x ToughJet
+POST http://localhost:8080/v1/flights/search
+Content-Type: application/json
+
+{
+  "origin": "LHR",
+  "destination": "AMS",
+  "departureDate": "2025-11-20",
+  "returnDate": "2025-11-28",
+  "numberOfPassengers": 2
+}
+
+<> 2025-11-08T031504.200.json
+<> 2025-11-08T031012.200.json
+
+### 1x CrazyAir + 1x ToughJet
+POST http://localhost:8080/v1/flights/search
+Content-Type: application/json
+
+{
+  "origin": "WAW",
+  "destination": "BCN",
+  "departureDate": "2025-12-05",
+  "returnDate": "2025-12-12",
+  "numberOfPassengers": 1
+}
+
+<> 2025-11-08T031601.200.json
+<> 2025-11-08T031108.200.json
+
+### 1x CrazyAir + 0x ToughJet
+POST http://localhost:8080/v1/flights/search
+Content-Type: application/json
+
+{
+  "origin": "LHR",
+  "destination": "JFK",
+  "departureDate": "2025-12-10",
+  "returnDate": "2025-12-20",
+  "numberOfPassengers": 3
+}
+
+
+### 0x CrazyAir + 0x ToughJet
+POST http://localhost:8080/v1/flights/search
+Content-Type: application/json
+
+{
+  "origin": "DUB",
+  "destination": "OSL",
+  "departureDate": "2025-12-15",
+  "returnDate": "2025-12-20",
+  "numberOfPassengers": 2
+}
+
+<> 2025-11-08T031236.200.json
+
+### Wrong IATA
+POST http://localhost:8080/v1/flights/search
+Content-Type: application/json
+
+{
+  "origin": "LH",
+  "destination": "AMS",
+  "departureDate": "2025-11-20",
+  "returnDate": "2025-11-28",
+  "numberOfPassengers": 2
+}
+
+<> 2025-11-08T031325.400.json
+
+### returnDate before departureDate
+POST http://localhost:8080/v1/flights/search
+Content-Type: application/json
+
+{
+  "origin": "LHR",
+  "destination": "AMS",
+  "departureDate": "2025-11-28",
+  "returnDate": "2025-11-20",
+  "numberOfPassengers": 2
+}
+
+<> 2025-11-08T031400.400.json
+
+### >4 Passengers
+POST http://localhost:8080/v1/flights/search
+Content-Type: application/json
+
+{
+  "origin": "LHR",
+  "destination": "AMS",
+  "departureDate": "2025-11-20",
+  "returnDate": "2025-11-28",
+  "numberOfPassengers": 5
+}
+
+<> 2025-11-08T031421.400.json

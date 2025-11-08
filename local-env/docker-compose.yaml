@@ -1,0 +1,17 @@
+name: exercise-local-env
+services:
+  crazy-air:
+    image: mockserver/mockserver
+    platform: linux/amd64
+    ports:
+      - "8081:1080"
+    volumes:
+      - ./crazy-air:/config
+
+  tough-jet:
+    image: mockserver/mockserver
+    platform: linux/amd64
+    ports:
+      - "8082:1080"
+    volumes:
+      - ./tough-jet:/config
